@@ -11,5 +11,5 @@ node_modules
 build
 typings
 temp
-
 *.log
+*.csproj.user
