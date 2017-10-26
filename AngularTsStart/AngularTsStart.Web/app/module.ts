@@ -1,8 +1,8 @@
-﻿import {module} from 'angular';
+﻿import { module } from 'angular';
 
 export let app = module('example', [
-        require('angular-ui-router')
-    ])
+    require('angular-ui-router')
+])
     .config([
         '$stateProvider', '$urlRouterProvider', '$locationProvider',
         function (stateProvider, urlRouterProvider, locationProvider) {
@@ -20,11 +20,3 @@ export let app = module('example', [
                     controller: "twoController"
                 });
         }]);
-
-import './components/one/one';
-import './components/two/two';
-import './shared/data-service';
-
-angular.element(document).ready(function () {
-    angular.bootstrap(document, ['example']);
-});

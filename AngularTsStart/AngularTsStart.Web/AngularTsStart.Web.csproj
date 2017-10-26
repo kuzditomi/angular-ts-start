@@ -25,7 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -112,6 +112,7 @@
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="typings.json" />
+    <Content Include="app\styles\style.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -119,15 +120,17 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
+    <TypeScriptCompile Include="app\components\index.ts" />
     <TypeScriptCompile Include="app\components\one\one.ts" />
     <TypeScriptCompile Include="app\components\two\two.ts" />
+    <TypeScriptCompile Include="app\index.ts" />
+    <TypeScriptCompile Include="app\module.run.ts" />
     <TypeScriptCompile Include="app\module.ts" />
     <TypeScriptCompile Include="app\shared\data-service.ts" />
+    <TypeScriptCompile Include="app\shared\index.ts" />
+    <TypeScriptCompile Include="tests\unit-tests\data-service-test.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

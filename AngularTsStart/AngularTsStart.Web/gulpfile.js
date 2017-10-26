@@ -5,6 +5,9 @@ var watchify = require('watchify');
 var tsify = require('tsify');
 var gutil = require('gulp-util');
 var watch = require('gulp-watch');
+var lessify = require('node-lessify');
+var jasmine = require('gulp-jasmine');
+var typescript = require('gulp-typescript');
 
 var paths = {
     pages: ['app/**/*.html']
@@ -13,11 +16,12 @@ var paths = {
 var watchedBrowserify = watchify(browserify({
     basedir: '.',
     debug: true,
-    entries: "app/module.ts",
+    entries: "app/index.ts",
     cache: {},
     packageCache: {}
 }).plugin(tsify))
-.on('error', function(err){
+    .transform(lessify)
+.on('error', function (err) {
     console.log(err);
 });
 
@@ -30,7 +34,7 @@ gulp.task('html:watch', () => {
     return gulp.src(paths.pages)
         .pipe(watch(paths.pages))
         .pipe(gulp.dest('build'));
-})
+});
 
 gulp.task('ts:watch', bundle);
 
@@ -43,6 +47,12 @@ function bundle() {
             console.log(err);
         });
 }
+
+gulp.task('unit-test', () => {
+    gulp.src('tests/unit-tests/**/*.ts')
+        .pipe(typescript())
+        .pipe(jasmine());
+});
 
 gulp.task('default', ['html:copy', 'html:watch', 'ts:watch']);
 
