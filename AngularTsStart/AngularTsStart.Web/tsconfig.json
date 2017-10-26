@@ -1,13 +1,15 @@
 ﻿{
-  "compilerOptions": {
-    "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true,
-    "outDir": "temp/jslofasz/",
-    "moduleResolution": "node"
-  },
-  "exclude": [
-    "node_modules",
-    "build"
-  ]
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "module": "commonjs",
+        "target": "es5",
+        "lib": [ "es6", "dom" ],
+        "sourceMap": true,
+        "outDir": "temp/jslofasz/",
+        "moduleResolution": "node"
+    },
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
 }
