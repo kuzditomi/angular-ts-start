@@ -132,6 +132,7 @@
     <TypeScriptCompile Include="app\module.new.ts" />
     <TypeScriptCompile Include="app\module.run.ts" />
     <TypeScriptCompile Include="app\module.ts" />
+    <TypeScriptCompile Include="app\shared\new-data-service.ts" />
     <TypeScriptCompile Include="app\shared\data-service.ts" />
     <TypeScriptCompile Include="app\shared\index.ts" />
     <TypeScriptCompile Include="tests\unit-tests\data-service-test.ts" />

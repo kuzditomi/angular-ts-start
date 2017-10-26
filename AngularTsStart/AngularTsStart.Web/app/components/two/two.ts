@@ -7,11 +7,12 @@ export interface ITwoControllerScope extends angular.IScope {
 }
 
 class TwoController {
-    static $inject = ['$scope', 'Data'];
+    static $inject = ['$scope', 'Data', 'NewData'];
 
-    constructor(private scope: ITwoControllerScope, private dataService: IDataService) {
+    constructor(private scope: ITwoControllerScope, private dataService: IDataService, newData: IDataService) {
         scope.state = 'two works';
         scope.data = dataService.Data;
+        scope.newdata = newData.Data;
     }
 }
 
