@@ -1,6 +1,7 @@
 ﻿import 'zone.js';
 import 'reflect-metadata';
 import { app } from '../../module';
+import { adapter } from '../../module.run';
 
 import { Component, Inject } from "@angular/core";
 import { IDataService } from "../../shared";
@@ -22,3 +23,5 @@ export class Ng2Component {
         this.data = dataService.Data;
     }
 }
+
+app.directive('ng2Comp', adapter.downgradeNg2Component(Ng2Component) as any);

@@ -129,6 +129,7 @@
     <TypeScriptCompile Include="app\components\one\one.ts" />
     <TypeScriptCompile Include="app\components\two\two.ts" />
     <TypeScriptCompile Include="app\index.ts" />
+    <TypeScriptCompile Include="app\module.new.ts" />
     <TypeScriptCompile Include="app\module.run.ts" />
     <TypeScriptCompile Include="app\module.ts" />
     <TypeScriptCompile Include="app\shared\data-service.ts" />
